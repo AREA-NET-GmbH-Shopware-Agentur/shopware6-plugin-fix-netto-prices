@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="AreanetFixNettoPrices\Core\Content\Product\SalesChannel\Price\ProductPriceCalculator" decorates="Shopware\Core\Content\Product\SalesChannel\Price\ProductPriceCalculator">
+            <argument type="service" id="AreanetFixNettoPrices\Core\Content\Product\SalesChannel\Price\ProductPriceCalculator.inner" />
+            <argument type="service" id="unit.repository"/>
+            <argument type="service" id="Shopware\Core\Checkout\Cart\Price\QuantityPriceCalculator"/>
+        </service>
+
+        <service id="AreanetFixNettoPrices\Core\Framework\DataAbstractionLayer\Cache\AreanetEntityCacheKeyGenerator" decorates="Shopware\Core\Framework\DataAbstractionLayer\Cache\EntityCacheKeyGenerator">
+            <argument type="service" id="AreanetFixNettoPrices\Core\Framework\DataAbstractionLayer\Cache\AreanetEntityCacheKeyGenerator.inner" />
+        </service>
+    </services>
+</container>
