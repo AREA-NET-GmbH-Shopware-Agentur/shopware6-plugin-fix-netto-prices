@@ -4,6 +4,9 @@ Der Bruttopreis berechnet sich aus dem Nettopreis und der Umsatzsteuer des jewei
 
 The gross price is calculated from the net price and the VAT of the respective country of delivery. This means that the net prices remain the same - in the Shopware standard, the calculation is carried out with constant gross prices.
 
+![Delivery to germany](images/germany.png)
+![Delivery to belgium](images/belgium.png)
+
 ## Unterstützte Shopware Versionen und Changelog
 
 Stand 11.03.2025:
